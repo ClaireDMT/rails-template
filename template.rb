@@ -265,3 +265,5 @@ def push_github
     puts 'You first need to install the hub command line tool'
   end
 end
+
+apply_template!
