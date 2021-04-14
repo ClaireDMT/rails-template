@@ -89,6 +89,9 @@ def setup_gems
   setup_devise if @devise
   setup_pundit if @pundit
 end
+def setup_friendly_id
+  generate "friendly_id"
+end
 
 def setup_annotate
   run 'rails g annotate:install'
