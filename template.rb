@@ -61,7 +61,6 @@ end
 def copy_templates
   template "Gemfile.tt", force: true
   template 'README.md.tt', force: true
-  apply 'config/template.rb'
   apply 'app/template.rb'
   copy_file 'Procfile'
   copy_file 'Procfile.dev'
