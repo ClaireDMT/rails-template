@@ -80,7 +80,6 @@ def add_gems
   gem 'redis'
   gem 'sidekiq'
   gem 'sidekiq-failures'
-  gem 'friendly_id'
   gem 'name_of_person'
   gem 'bootstrap'
   gem 'font-awesome-sass'
@@ -101,7 +100,6 @@ def add_gems
 end
 
 def setup_gems
-  setup_friendly_id # fix that
   setup_annotate
   setup_bullet
   setup_erd
@@ -109,9 +107,6 @@ def setup_gems
   setup_rubocop
   setup_devise if @devise
   setup_pundit if @pundit
-end
-def setup_friendly_id
-  generate "friendly_id"
 end
 
 def setup_annotate
