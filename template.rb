@@ -12,12 +12,6 @@ def apply_template!
   setup_environment
 
   after_bundle do
-    #run 'bundle binstubs bundler --force'
-    #run 'bundle exec spring binstub --all'
-    #gem_group :development do
-     # gem "spring"
-    #end
-    #run 'bundle install'
     setup_gems
     setup_assets
     setup_npm_packages
@@ -82,6 +76,28 @@ end
 def add_gems
   gem 'devise' if @devise
   gem 'pundit' if @pundit
+  gem 'uglifier'
+  gem 'redis'
+  gem 'sidekiq'
+  gem 'sidekiq-failures'
+  gem 'friendly_id'
+  gem 'name_of_person'
+  gem 'bootstrap'
+  gem 'font-awesome-sass'
+  gem 'autoprefixer-rails'
+  gem_group :development, :test do
+    gem 'pry-byebug'
+    gem 'pry-rails'
+    gem 'dotenv-rails'
+    gem "binding_of_caller"
+  end
+  gem_group :development do
+    gem 'annotate'
+    gem 'awesome_print'
+    gem 'bullet'
+    gem 'rails-erd'
+    gem 'rubocop', require: false
+  end
 end
 
 def setup_gems
