@@ -18,8 +18,10 @@ def apply_template!
     setup_js
     setup_webpack
     setup_pages
+    
     run 'rails generate devise:install' if @devise_with_bootstrap 
     run 'rails db:create db:migrate'
+    
     setup_git
     push_github if @github
     setup_overcommit
