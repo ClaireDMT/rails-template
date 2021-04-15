@@ -133,8 +133,8 @@ def setup_rubocop
 end
 
 def setup_devise
-  generate 'devise:install'
-  generate 'devise:i18n:views'
+  run 'spring stop'
+  run 'rails generate devise:install'
   environment "config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }",
               env: 'development'
   environment 'config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }', env: 'production'
