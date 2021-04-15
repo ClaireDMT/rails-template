@@ -130,7 +130,6 @@ end
 def setup_rubocop
   run 'bundle binstubs rubocop'
   copy_file '.rubocop.yml'
-  run 'rubocop'
 end
 
 def setup_devise
