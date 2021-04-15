@@ -12,7 +12,7 @@ def apply_template!
   setup_environment
 
   after_bundle do
-    #run 'bundle binstubs bundler --force'
+    run 'bundle binstubs bundler --force'
     run 'bundle exec spring binstub --all'
     #gem_group :development do
      # gem "spring"
