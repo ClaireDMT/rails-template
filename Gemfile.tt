@@ -10,7 +10,7 @@ gem 'rails', '<%= Rails.version %>'
 gem 'sass-rails'<%= gemfile_requirement('sass-rails') %>
 gem 'rails-i18n'
 # issue with bootsnap, breaking webpacker:install
-# gem 'bootsnap', '>= 1.1.0', require: false
+# gem 'bootsnap', require: false
 
 
 # JS
