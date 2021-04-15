@@ -118,7 +118,6 @@ def setup_bullet
 end
 
 def setup_erd
-  run 'rails g erd:install'
   append_to_file '.gitignore', 'erd.pdf'
 end
 
