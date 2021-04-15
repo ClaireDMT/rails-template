@@ -19,7 +19,6 @@ def apply_template!
     setup_webpack
     setup_pages
     
-    run 'rails generate devise:install' if @devise_with_bootstrap 
     run 'rails db:create db:migrate'
     
     setup_git
@@ -68,7 +67,6 @@ end
 
 def ask_optional_options
   @devise = yes?('Do you want to implement authentication in your app with the Devise gem?')
-  @devise_with_bootstrap = yes?('Do you want to implement devise with bootstrap?') if @devise
   @pundit = yes?('Do you want to manage authorizations with Pundit?') if @devise
   @github = yes?('Do you want to push your project to Github?')
 end
