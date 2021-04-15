@@ -108,10 +108,6 @@ def setup_gems
   setup_pundit if @pundit
 end
 
-def setup_annotate
-  run 'rails g annotate:install'
-end
-
 def setup_bullet
   inject_into_file 'config/environments/development.rb', before: /^end/ do
     <<-RUBY
