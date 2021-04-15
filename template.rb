@@ -96,6 +96,7 @@ def add_gems
     gem 'bullet'
     gem 'rails-erd'
     gem 'rubocop', require: false
+    gem 'rubocop-performance', require: false
   end
 end
 
