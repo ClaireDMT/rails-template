@@ -87,22 +87,22 @@ def add_gems
   end
     
    inject_into_file 'Gemfile', after: 'group :development, :test do' do
-    <<~RUBY
-    gem 'pry-byebug'
-    gem 'pry-rails'
-    gem 'dotenv-rails'
-    gem "binding_of_caller"
+    <<-RUBY
+      gem 'pry-byebug'
+      gem 'pry-rails'
+      gem 'dotenv-rails'
+      gem "binding_of_caller"
     RUBY
   end
     
    inject_into_file 'Gemfile', after: 'group :development do' do
-    <<~RUBY
-    gem 'annotate'
-    gem 'awesome_print'
-    gem 'bullet'
-    gem 'rails-erd'
-    gem 'rubocop', require: false
-    gem 'rubocop-performance', require: false
+    <<-RUBY
+      gem 'annotate'
+      gem 'awesome_print'
+      gem 'bullet'
+      gem 'rails-erd'
+      gem 'rubocop', require: false
+      gem 'rubocop-performance', require: false
     RUBY
   end
 end
