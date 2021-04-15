@@ -140,7 +140,6 @@ def setup_devise
   environment 'config.action_mailer.default_url_options = { host: "http://TODO_PUT_YOUR_DOMAIN_HERE" }', env: 'production'
   insert_into_file 'config/initializers/devise.rb', "  config.secret_key = Rails.application.credentials.secret_key_base\n", before: /^end/
   run 'rails g devise User first_name last_name'
-  insert_into_file 'app/controllers/pages_controller.rb', "  skip_before_action :authenticate_user!, only: :home\n", after: /ApplicationController\n/
   copy_file 'app/controllers/application_controller.rb', force: true
 end
 
