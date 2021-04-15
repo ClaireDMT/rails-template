@@ -1,7 +1,5 @@
 require:
   - rubocop-performance
-  - rubocop-rails
-
 AllCops:
   NewCops: enable
   Exclude:
