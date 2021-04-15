@@ -174,7 +174,7 @@ end
 def setup_npm_packages
   packages = %w[
     bootstrap
-    popper.ks
+    popper.js
     jquery
     babel-eslint
     eslint
