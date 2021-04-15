@@ -100,7 +100,6 @@ def add_gems
 end
 
 def setup_gems
-  setup_annotate
   setup_bullet
   setup_erd
   setup_sidekiq
