@@ -85,7 +85,7 @@ def add_gems
     RUBY
   end
     
-   inject_into_file 'Gemfile', before: 'group :development, :test do' do
+   inject_into_file 'Gemfile', after: 'group :development, :test do' do
     <<~RUBY
     gem 'pry-byebug'
     gem 'pry-rails'
@@ -94,7 +94,7 @@ def add_gems
     RUBY
   end
     
-   inject_into_file 'Gemfile', before: 'group :development do' do
+   inject_into_file 'Gemfile', after: 'group :development do' do
     <<~RUBY
     gem 'annotate'
     gem 'awesome_print'
