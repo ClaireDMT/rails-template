@@ -21,7 +21,6 @@ def apply_template!
     run 'rails db:create db:migrate'
     setup_git
     push_github if @github
-    setup_overcommit
   end
 end
 
