@@ -70,10 +70,11 @@ end
 
 
 def add_gems
+  add_devise if @devise
+  add_devise if @pundit
+
   inject_into_file 'Gemfile', before: 'group :development, :test do' do
     <<~RUBY
-    gem 'devise' if @devise
-    gem 'pundit' if @pundit
     gem 'uglifier'
     gem 'redis'
     gem 'sidekiq'
@@ -102,6 +103,22 @@ def add_gems
     gem 'rails-erd'
     gem 'rubocop', require: false
     gem 'rubocop-performance', require: false
+    RUBY
+  end
+end
+
+def add_devise
+  inject_into_file 'Gemfile', before: 'group :development, :test do' do
+    <<~RUBY
+     gem 'devise'
+    RUBY
+  end
+end
+
+def add_pundit
+  inject_into_file 'Gemfile', before: 'group :development, :test do' do
+    <<~RUBY
+      gem 'pundit'
     RUBY
   end
 end
