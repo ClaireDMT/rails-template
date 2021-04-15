@@ -42,7 +42,6 @@ group :development, :test do
 end
 
 group :development do
-  gem 'spring'
   gem 'annotate'
   gem 'awesome_print'
   gem 'bullet'
