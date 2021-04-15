@@ -17,10 +17,8 @@ def apply_template!
     setup_npm_packages
     setup_js
     setup_webpack
-    setup_pages
-    
+    setup_pages 
     run 'rails db:create db:migrate'
-    
     setup_git
     push_github if @github
     setup_overcommit
