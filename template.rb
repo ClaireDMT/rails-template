@@ -70,29 +70,39 @@ end
 
 
 def add_gems
-  gem 'devise' if @devise
-  gem 'pundit' if @pundit
-  gem 'uglifier'
-  gem 'redis'
-  gem 'sidekiq'
-  gem 'sidekiq-failures'
-  gem 'name_of_person'
-  gem 'bootstrap'
-  gem 'font-awesome-sass'
-  gem 'autoprefixer-rails'
-  gem_group :development, :test do
+  inject_into_file 'Gemfile', before: 'group :development, :test do' do
+    <<~RUBY
+    gem 'devise' if @devise
+    gem 'pundit' if @pundit
+    gem 'uglifier'
+    gem 'redis'
+    gem 'sidekiq'
+    gem 'sidekiq-failures'
+    gem 'name_of_person'
+    gem 'bootstrap'
+    gem 'font-awesome-sass'
+    gem 'autoprefixer-rails'
+    RUBY
+  end
+    
+   inject_into_file 'Gemfile', before: 'group :development, :test do' do
+    <<~RUBY
     gem 'pry-byebug'
     gem 'pry-rails'
     gem 'dotenv-rails'
     gem "binding_of_caller"
+    RUBY
   end
-  gem_group :development do
+    
+   inject_into_file 'Gemfile', before: 'group :development do' do
+    <<~RUBY
     gem 'annotate'
     gem 'awesome_print'
     gem 'bullet'
     gem 'rails-erd'
     gem 'rubocop', require: false
     gem 'rubocop-performance', require: false
+    RUBY
   end
 end
 
