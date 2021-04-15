@@ -71,7 +71,7 @@ end
 
 def add_gems
   add_devise if @devise
-  add_devise if @pundit
+  add_pundit if @pundit
 
   inject_into_file 'Gemfile', before: 'group :development, :test do' do
     <<~RUBY
