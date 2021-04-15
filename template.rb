@@ -124,8 +124,6 @@ end
 
 def setup_sidekiq
   run 'bundle binstubs sidekiq'
-  append_to_file 'Procfile.dev', "worker: bundle exec sidekiq -C config/sidekiq.yml\n"
-  append_to_file 'Procfile', "worker: bundle exec sidekiq -C config/sidekiq.yml\n"
 end
 
 def setup_rubocop
