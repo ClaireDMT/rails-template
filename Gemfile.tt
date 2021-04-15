@@ -15,8 +15,6 @@ gem 'bootsnap', require: false
 
 # JS
 gem 'uglifier'<%= gemfile_requirement('uglifier') %>
-gem 'webpacker', github: 'rails/webpacker'
-
 gem 'jbuilder'<%= gemfile_requirement('jbuilder') %>
 gem 'redis'<%= gemfile_requirement('redis') %>
 gem 'turbolinks'<%= gemfile_requirement('turbolinks') %>
