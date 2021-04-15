@@ -58,7 +58,7 @@ def gemfile_requirement(name)
 end
 
 def copy_templates
-  template "Gemfile.tt", force: true
+  #template "Gemfile.tt", force: true
   template 'README.md.tt', force: true
   copy_file 'Procfile'
   copy_file 'Procfile.dev'
