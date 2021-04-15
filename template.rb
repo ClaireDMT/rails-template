@@ -117,6 +117,7 @@ def setup_bullet
   end
 end
 
+
 def setup_erd
   append_to_file '.gitignore', 'erd.pdf'
 end
